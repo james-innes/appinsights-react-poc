@@ -52,13 +52,14 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter history={history}>
       <TelemetryProvider>
+
         <ul>
-          <li><Link to="/">Foo</Link></li>
-          <li><Link to="/bar">Bar</Link></li>
-          <li><Link to="/baz">Baz</Link></li>
+          <li><a href="/foo">Foo</a></li>
+          <li><a href="/bar">Bar</a></li>
+          <li><a href="/baz">Baz</a></li>
         </ul>
 
-        <Route exact path="/" component={Foo} />
+        <Route path="/foo" component={Foo} />
         <Route path="/bar" component={Bar} />
         <Route path="/baz" component={Baz} />
 
