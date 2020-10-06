@@ -5,15 +5,15 @@
     "build": "react-scripts build"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-scripts": "3.4.3"
   },
   "devDependencies": {
-    "@microsoft/applicationinsights-react-js": "^3.0.3",
-    "@microsoft/applicationinsights-web": "^2.5.8",
-    "react-router-dom": "^5.2.0",
-    "history": "^5.0.0"
+    "@microsoft/applicationinsights-react-js": "3.0.3",
+    "@microsoft/applicationinsights-web": "2.5.8",
+    "react-router-dom": "5.2.0",
+    "history": "4.10.1"
   },
   "eslintConfig": {
     "extends": "react-app"
