@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import { Router, Route } from "react-router-dom";
+import { Router, Route, Link } from "react-router-dom";
 import { createBrowserHistory } from 'history'
 import { ApplicationInsights, SeverityLevel } from "@microsoft/applicationinsights-web";
 import { ReactPlugin, withAITracking } from "@microsoft/applicationinsights-react-js";
@@ -38,9 +38,9 @@ const Baz = () => <h1>baz</h1>;
 const App = withAITracking(reactPlugin, () => (
   <Router history={history}>
     <ul>
-      <li><a href="/foo">Foo</a></li>
-      <li><a href="/bar">Bar</a></li>
-      <li><a href="/baz">Baz</a></li>
+      <li><Link to="/foo">Foo</Link></li>
+      <li><Link to="/bar">Bar</Link></li>
+      <li><Link to="/baz">Baz</Link></li>
     </ul>
 
     <Route path="/foo" component={Foo} />
