@@ -12,8 +12,6 @@ const ai = new ApplicationInsights({
   config: {
     instrumentationKey: "YOUR_APPINSIGHTS_INSTRUMENTATION_KEY",
     loggingLevelConsole: 2,
-    maxBatchInterval: 0,
-    maxBatchSizeInBytes: 1000,
     loggingLevelTelemetry: 2,
     autoTrackPageVisitTime: true,
     enableAutoRouteTracking: true,
