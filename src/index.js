@@ -44,7 +44,7 @@ const App = withAITracking(reactPlugin, () => (
       <Route path="/foo" component={Foo} />
       <Route path="/bar" component={Bar} />
       <Route path="/baz" component={Baz} />
-    <Switch />
+    </Switch>
 
     <button onClick={() =>
       ai.trackException({
