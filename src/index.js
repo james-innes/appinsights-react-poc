@@ -31,9 +31,9 @@ const ai = new ApplicationInsights({
 ai.loadAppInsights();
 ai.trackPageView();
 
-const Foo = () => <h1>foo</h1>;
-const Bar = () => <h1>bar</h1>;
-const Baz = () => <h1>baz</h1>;
+const Foo = () => <h1>Page: foo</h1>;
+const Bar = () => <h1>Page: bar</h1>;
+const Baz = () => <h1>Page: baz</h1>;
 
 const App = withAITracking(reactPlugin, () => (
   <Router history={history}>
@@ -74,6 +74,12 @@ const App = withAITracking(reactPlugin, () => (
     <button onClick={() => fetch("https://httpbin.org/status/200")}>
       Auto collect a dependency (Fetch)
     </button>
+
+    <h2>Notes</h2>
+    <ul>
+      <li>Unable to produce telemetry metric: `name: "React Component Engaged Time (seconds)"`.</li>
+      <li>Note exact version of `react-router-dom` and `history` used for compatibility.</li>
+    </ul>
   </Router >
 ))
 
