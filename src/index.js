@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import { Router, Route, Link } from "react-router-dom";
+import { Router, Route, Link, Switch } from "react-router-dom";
 import { createBrowserHistory } from 'history'
 import { ApplicationInsights, SeverityLevel } from "@microsoft/applicationinsights-web";
 import { ReactPlugin, withAITracking } from "@microsoft/applicationinsights-react-js";
@@ -42,10 +42,11 @@ const App = withAITracking(reactPlugin, () => (
       <li><Link to="/bar">Bar</Link></li>
       <li><Link to="/baz">Baz</Link></li>
     </ul>
-
-    <Route path="/foo" component={Foo} />
-    <Route path="/bar" component={Bar} />
-    <Route path="/baz" component={Baz} />
+    <Switch>
+      <Route path="/foo" component={Foo} />
+      <Route path="/bar" component={Bar} />
+      <Route path="/baz" component={Baz} />
+    <Switch />
 
     <button onClick={() =>
       ai.trackException({
