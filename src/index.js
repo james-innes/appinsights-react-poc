@@ -10,7 +10,7 @@ const history = createBrowserHistory();
 const reactPlugin = new ReactPlugin();
 const ai = new ApplicationInsights({
   config: {
-    instrumentationKey: "63b8f2d7-2dd0-4a69-a5ac-b6b202530e12",
+    instrumentationKey: "YOUR_APPINSIGHTS_INSTRUMENTATION_KEY",
     loggingLevelConsole: 2,
     maxBatchInterval: 0,
     maxBatchSizeInBytes: 1000,
